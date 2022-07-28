@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport"
+        content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0,viewport-fit=cover">
+    <title>LOGIN2</title>
+</head>
+
+<body>
+    <div class="body">
+        <div class="img"></div>
+        <div class="loginbox">
+            <h1 class="text login-title">Signup</h1>
+            <form class="form" id="signup" onsubmit="return false;">
+                <div class="input-space">
+                    <label>Nhập email:</label>
+                    <input class="inputarea" , type="email" placeholder="Email" required>
+                </div>
+                <div class="input-space">
+                    <label>Nhập password:</label>
+                    <input class="inputarea" type="password" placeholder="Password" id="passwordsignup" required>
+                </div>
+                <div class="input-space">
+                    <label>Nhập lại password:</label>
+                    <input class="inputarea" type="password" placeholder="Retype password" id="retypepassword" required>
+                    <input type="checkbox" onclick="showPassword()"> Show password?
+                    <br>
+                    <button class="button">Đăng ký</button>
+                    <div class="input-button">
+                        <label>Đã có tài khoản?</label>
+                        <br>
+                        <button class="button" formnovalidate
+                            onclick="document.getElementById('loginid').style.display='block'">Đăng nhập</button>
+                    </div>
+                </div>
+            </form>
+
+            <!-- <form class="form" id="login">
+
+            </form> -->
+
+        </div>
+    </div>
+
+
+    <div class="modal" id="loginid">
+        <form class="modal-content" id="signup" onsubmit="return false;">
+            <h1 class="text login-title">Login</h1>
+            <div class="input-space">
+                <label>Nhập email:</label>
+                <input class="inputarea" , type="email" placeholder="Email" required>
+            </div>
+            <div class="input-space">
+                <label>Nhập password:</label>
+                <input class="inputarea" type="password" placeholder="Password" id="passwordlogin" required>
+                <input type="checkbox" onclick="showPassword()"> Show password?
+                <br>
+                <button class="button">Đăng nhập</button>
+                <button class="button forgot" formnovalidate>Quên mật khẩu?</button>
+            </div>
+        </form>
+    </div>
+
+
+    <script>
+        var modal = document.getElementById('loginid');
+
+        window.onclick = function (event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+
+
+        function showPassword() {
+            var x = document.getElementById("passwordsignup");
+            var y = document.getElementById("retypepassword");
+            var z = document.getElementById("passwordlogin");
+            if (x.type === "password") {
+                x.type = "text";
+            } else x.type = "password";
+
+            if (y.type === "password") {
+                y.type = "text";
+            } else y.type = "password";
+
+            if (z.type === "password") {
+                z.type = "text";
+            } else z.type = "password";
+
+        }
+    </script>
+</body>
+
+</html>
