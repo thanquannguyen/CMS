@@ -117,5 +117,18 @@ html {
     width: 60%;
     padding: 50px;
     border-radius: 20px;
-    
+
+}
+
+.close {
+    float: right;
+    color: #fff;
+    font-size: 35px;
+    font-weight: bold;
+  }
+
+.close:hover,
+.close:focus {
+    color: red;
+    cursor: pointer;
 }
