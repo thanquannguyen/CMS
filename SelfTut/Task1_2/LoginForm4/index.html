@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="style.css">
     <meta name="viewport"
         content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0,viewport-fit=cover">
-    <title>LOGIN2</title>
+    <title>LOGIN4</title>
 </head>
 
 <body>
@@ -17,7 +17,7 @@
             <form class="form" id="signup" onsubmit="return false;">
                 <div class="input-space">
                     <label>Nhập email:</label>
-                    <input class="inputarea" , type="email" placeholder="Email" required>
+                    <input class="inputarea" , type="text" placeholder="Email" id="signuparea" required>
                 </div>
                 <div class="input-space">
                     <label>Nhập password:</label>
@@ -28,7 +28,7 @@
                     <input class="inputarea" type="password" placeholder="Retype password" id="retypepassword" required>
                     <input type="checkbox" onclick="showPassword()"> Show password?
                     <br>
-                    <button class="button">Đăng ký</button>
+                    <button class="button" onclick="store()">Đăng ký</button>
                     <div class="input-button">
                         <label>Đã có tài khoản?</label>
                         <br>
@@ -46,52 +46,25 @@
 
 
     <div class="modal" id="loginid">
-        <form class="modal-content" id="signup" onsubmit="return false;">
+        <form class="modal-content" id="login" onsubmit="return false;">
             <span onclick="document.getElementById('loginid').style.display='none'" class="close" title="Close Modal">&times;</span>
             <h1 class="text login-title">Login</h1>
             <div class="input-space">
                 <label>Nhập email:</label>
-                <input class="inputarea" , type="email" placeholder="Email" required>
+                <input class="inputarea" , type="email" placeholder="Email" id="loginarea" required>
             </div>
             <div class="input-space">
                 <label>Nhập password:</label>
                 <input class="inputarea" type="password" placeholder="Password" id="passwordlogin" required>
                 <input type="checkbox" onclick="showPassword()"> Show password?
                 <br>
-                <button class="button">Đăng nhập</button>
-                <button class="button forgot" formnovalidate>Quên mật khẩu?</button>
+                <button class="button" onclick="dangnhap()">Đăng nhập</button>
             </div>
         </form>
     </div>
 
 
-    <script>
-        var modal = document.getElementById('loginid');
-
-        window.onclick = function (event) {
-            if (event.target == modal) {
-                modal.style.display = "none";
-            }
-        }
-
-
-        function showPassword() {
-            var x = document.getElementById("passwordsignup");
-            var y = document.getElementById("retypepassword");
-            var z = document.getElementById("passwordlogin");
-            if (x.type === "password") {
-                x.type = "text";
-            } else x.type = "password";
-
-            if (y.type === "password") {
-                y.type = "text";
-            } else y.type = "password";
-
-            if (z.type === "password") {
-                z.type = "text";
-            } else z.type = "password";
-
-        }
+    <script src="login.js">
     </script>
 </body>
 
