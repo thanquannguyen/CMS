@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport"
+        content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0,viewport-fit=cover">
+    <title>LOGIN5</title>
+</head>
+
+<body>
+    <div class="body">
+        <div class="img"></div>
+        <div class="list">
+            Thông tin đăng nhập
+            <table class="tablelist">
+                <thead>
+                    <tr>
+                        <td>Email</td>
+                        <td>Password</td>
+                    </tr>
+                </thead>
+
+                <tbody>
+
+                </tbody>
+            </table>
+        </div>
+        <div class="loginbox">
+            <h1 class="text login-title">Sign Up</h1>
+            <form class="form" id="signup" onsubmit="return false;">
+                <div class="input-space">
+                    <label>Nhập email:</label>
+                    <input class="inputarea" , type="text" placeholder="Email" id="signuparea" required>
+                </div>
+                <div class="input-space">
+                    <label>Nhập password:</label>
+                    <input class="inputarea" type="password" placeholder="Password" id="passwordsignup" required>
+                </div>
+                <div class="input-space">
+                    <label>Nhập lại password:</label>
+                    <input class="inputarea" type="password" placeholder="Retype password" id="retypepassword" required>
+                    <input id="showPass1" type="checkbox" onclick="showPassword()"> Show password?
+                    <br>
+                    <button class="button" onclick="store()">Đăng ký</button>
+                    <div class="input-button">
+                        <label>Đã có tài khoản?</label>
+                        <br>
+                        <button class="button" formnovalidate
+                            onclick="document.getElementById('loginid').style.display='block'">Đăng nhập</button>
+                    </div>
+                </div>
+            </form>
+
+            <!-- <form class="form" id="login">
+            </form> -->
+
+        </div>
+    </div>
+
+
+    <div class="modal" id="loginid">
+        <form class="modal-content" id="login" onsubmit="return false;">
+            <span onclick="document.getElementById('loginid').style.display='none'" class="close"
+                title="Close Modal">&times;</span>
+            <h1 class="text login-title">Login</h1>
+            <div class="input-space">
+                <label>Nhập email:</label>
+                <input class="inputarea" , type="email" placeholder="Email" id="loginarea" required>
+            </div>
+            <div class="input-space">
+                <label>Nhập password:</label>
+                <input class="inputarea" type="password" placeholder="Password" id="passwordlogin" required>
+                <input id="showPass2" type="checkbox" onclick="showPassword()"> Show password?
+                <br>
+                <button class="button" onclick="dangnhap()">Đăng nhập</button>
+            </div>
+        </form>
+    </div>
+
+
+    <script src="login.js">
+    </script>
+</body>
+
+</html>

@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="style.css">
     <meta name="viewport"
         content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0,viewport-fit=cover">
-    <title>LOGIN4</title>
+    <title>LOGIN5</title>
 </head>
 
 <body>
@@ -26,7 +26,7 @@
                 <div class="input-space">
                     <label>Nhập lại password:</label>
                     <input class="inputarea" type="password" placeholder="Retype password" id="retypepassword" required>
-                    <input type="checkbox" onclick="showPassword()"> Show password?
+                    <input id="showPass1" type="checkbox" onclick="showPassword()"> Show password?
                     <br>
                     <button class="button" onclick="store()">Đăng ký</button>
                     <div class="input-button">
@@ -56,7 +56,7 @@
             <div class="input-space">
                 <label>Nhập password:</label>
                 <input class="inputarea" type="password" placeholder="Password" id="passwordlogin" required>
-                <input type="checkbox" onclick="showPassword()"> Show password?
+                <input id="showPass2" type="checkbox" onclick="showPassword()"> Show password?
                 <br>
                 <button class="button" onclick="dangnhap()">Đăng nhập</button>
             </div>

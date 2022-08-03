@@ -11,17 +11,29 @@ function showPassword() {
     var x = document.getElementById("passwordsignup");
     var y = document.getElementById("retypepassword");
     var z = document.getElementById("passwordlogin");
-    if (x.type === "password") {
-        x.type = "text";
-    } else x.type = "password";
+    var button1 = document.getElementById("showPass1");
+    var button2 = document.getElementById("showPass2");
+    if (button1.checked) {
+        if (x.type === "password") {
+            x.type = "text";
+        }
 
-    if (y.type === "password") {
-        y.type = "text";
-    } else y.type = "password";
+        if (y.type === "password") {
+            y.type = "text";
+        }
+    } else {
+        x.type = "password";
+        y.type = "password";
+    }
 
-    if (z.type === "password") {
-        z.type = "text";
-    } else z.type = "password";
+    if (button2.checked) {
+        if (z.type === "password") {
+            z.type = "text";
+        }
+    } else {
+        z.type = "password";
+    }
+
 
 }
 
@@ -55,13 +67,9 @@ function dangnhap() {
     if (inputName.value == storedName && inputPassword.value == storedPassword) {
         alert("Thông tin hợp lệ. Đăng nhập thành công.");
         return true;
-    }
-    else {
+    } else {
         alert("Thông tin không hợp lệ, vui lòng kiểm tra lại.");
         return false;
     }
 
 }
-
-
-
