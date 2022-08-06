@@ -1,0 +1,176 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    font-size: 16.5%;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    color: white;
+}
+
+.body {
+    height: 100%;
+    width: 100%;
+    background-position: center;
+    background-image: url("https://abs.twimg.com/sticky/illustrations/lohp_1302x955.png");
+    background-size: cover;
+    position: absolute;
+}
+
+.loginbox {
+    font-size: 2vw;
+    height: 100%;
+    width: 49%;
+    background-color: black;
+    position: relative;
+    float: right;
+}
+
+.list {
+    font-size: 2vw;
+    /* height: 50%; */
+    width: 49%;
+    color: black;
+    text-align: center;
+    background-color: white;
+    border: 2px solid black;
+    position: relative;
+    margin-left: 10px;
+    margin-top: 10px;
+    float: left;
+}
+
+.list table,
+td,
+td {
+    margin-top: 20px;
+    border: 1px solid;
+    width: 100%;
+    justify-content: center;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+th,
+td {
+    padding: 10px;
+}
+
+.login-title {
+    margin-top: 100px;
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+.form {
+    font-size: 2vh;
+    margin-left: 5vw;
+    margin-right: 20px;
+    justify-content: center;
+}
+
+.input-space {
+    width: 100%;
+}
+
+.inputarea:hover,
+.inputarea:focus {
+    border-bottom: 2px solid blue;
+}
+
+.inputarea {
+    color: white;
+    width: 100%;
+    padding: 10px;
+    border-radius: 20px;
+    border-color: transparent;
+    border-bottom-color: lightblue;
+    background-color: transparent;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+.input-button {
+    margin-top: 10%;
+}
+
+.button {
+    font-size: 1, 5vh;
+    padding: 20px 60px;
+    width: 30%;
+    border: 2px solid blue;
+    background-color: rgba(0, 0, 255, 0.527);
+    color: white;
+    border-radius: 20px;
+    font-weight: bolder;
+    margin-top: 10px;
+}
+
+.forgot {
+    float: right;
+    background-color: darkred;
+    border: 2px solid red;
+}
+
+.button:hover,
+.button:focus {
+    opacity: 0.8;
+}
+
+.button:active {
+    border: 2px solid rgba(92, 4, 151, 0.527);
+    background-color: rgba(92, 4, 151, 0.527);
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.4);
+    padding-top: 60px;
+}
+
+.modal-content {
+    font-size: 2vh;
+    background-color: black;
+    margin: 5% auto 15% auto;
+    border: 1px solid #888;
+    width: 60%;
+    padding: 50px;
+    border-radius: 20px;
+
+}
+
+.close {
+    float: right;
+    color: #fff;
+    font-size: 35px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: red;
+    cursor: pointer;
+}
+
+.instruction {
+    justify-content: baseline;
+    margin-right: 20px;
+    width: 50px;
+    height: 50px;
+    background-color: blue;
+    float:right;
+    border-radius: 50px;
+}
