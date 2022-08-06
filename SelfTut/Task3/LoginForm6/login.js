@@ -80,6 +80,7 @@ function store() {
             localStorage.setItem('data', JSON.stringify(data));
             alert("Đăng ký thành công. Bạn có thể tiến hành đăng nhập");
             document.querySelector('form').reset();
+            location.reload();
         } else {
             alert("Tài khoản này đã được đăng kí. Vui lòng đăng nhập.");
         }
