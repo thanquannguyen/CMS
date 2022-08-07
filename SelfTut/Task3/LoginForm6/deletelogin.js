@@ -13,18 +13,6 @@ $(document).ready(function () {
     });
 
     $(".deletecredential").click(function () {
-        // let datas = JSON.parse(localStorage.getItem('data')) || [];
-
-        // $('tbody td:first-child').each(function () {
-        //     for (let i = 0; i <= datas.length; i++) {
-        //         var data = datas[i];
-        //         console.log($(this).text());
-        //         if ($(this).text() === data.email) {
-        //             datas.splice(i, 1);
-        //             $(this).closest('tr').remove();
-        //         }
-        //     }
-        // })
         info = $(this).parents('tr').find("td:eq(0)").text();
         // console.log(info);
 
@@ -40,12 +28,6 @@ $(document).ready(function () {
         data = JSON.stringify(data);
         localStorage.setItem('data', data);
         $(this).closest('tr').remove();
-        // if (data.email == $('td:first-child')) {
-        //     data[0].delete({
-        //         email,
-        //         password
-        //     });
-        //     localStorage.setItem('data', JSON.stringify(data));
-        // }
+
     });
 });
