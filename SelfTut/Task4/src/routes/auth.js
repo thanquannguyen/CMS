@@ -56,10 +56,16 @@ router.post('/login', async (req, res) => {
 
     if (!checkPassword) return res.status(422).send('Email or Password is not correct');
 
-    const token = jwt.sign({_id: user._id}, process.env.JWT_KEY);
-    res.header('auth-token', token).send(token);
+    const token = jwt.sign({
+        _id: user._id
+    }, process.env.JWT_KEY);
+    // res.header('auth-token', token).send(token);
+    res.cookie('authtoken', token, {
+        maxAge: 60 * 60 * 24,
+        httpOnly: true
+    })
 
-    // return res.send(`User ${user.email} has logged in`);
+    return res.send(`User ${user.email} has logged in`);
 })
 
 router.get('/', verifyToken, (req, res) => {
