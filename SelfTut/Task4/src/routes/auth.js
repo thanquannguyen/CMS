@@ -9,19 +9,20 @@ const verifyToken = require('../middlewares/verifyToken');
 
 const registerValidator = (data) => {
     const rule = Joi.object({
-        name: Joi.string().min(6).max(225).required(),
+        // name: Joi.string().min(6).max(225).required(),
         email: Joi.string().min(6).max(225).required().email(),
-        password: Joi.string().pattern(new RegExp('^[a-zA-Z0-9]{6,20}$')).required(),
+        password: Joi.string().pattern(new RegExp('^[a-zA-Z0-9]{6,20}$')).required()
     })
 
-    return rule.validate(data);
+    return rule.validate({data});
 }
 
 router.post('/register', async (req, res) => {
+    // console.log(registerValidator(req.body))
     const {
-        err
+        error
     } = registerValidator(req.body);
-    if (err) return res.status(222).send(err.details[0].message);
+    if (error) return res.status(222).send(error.details[0].message);
 
     const checkEmailExist = await User.findOne({
         email: req.body.email
